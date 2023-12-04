@@ -1,0 +1,36 @@
+{%  extends 'main.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="row">
+	<div class="col-md-5" style="margin-left: 20px;">
+		<h5>Enter Twitter User handle:</h5>
+		<hr>
+		<div class="card card-body">
+			<form action="" method="POST">
+				{% csrf_token %}
+				<input type="text" id="tweet" name="t_user">
+				<input type="Submit" name="submit" value="Go"/>
+				</form>
+				
+		</div>
+		<div class="card-footer">
+			<p><br>{{name.found}}</b></p>
+		</div>
+	</div>
+	<div class="col-md-2">
+	</div>
+	<div class="col-md-4">
+		<div class="card card-body">
+			<canvas id="myChart" width="80" height="80"></canvas>
+		</div>
+		<div class="card-footer">
+			<h5 align="center">{{name.username}}</h5>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
